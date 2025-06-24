@@ -12,11 +12,6 @@ html, body {
   font-family: 'Poppins', sans-serif;
 }
 
-img, .botao, .container {
-  max-width: 100%;
-  height: auto;
-}
-
 p {
   font-weight: 300;  /* Deixa o texto mais fino (letra mais leve) */
   font-family: 'Poppins', sans-serif; /* Mantém a fonte 'Poppins' */
