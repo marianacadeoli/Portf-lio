@@ -439,7 +439,6 @@ h3:not(:first-child) {
 
 .rodape {
   padding: 30px 0;
-  width: 100vw;
   box-sizing: border-box;
 }
 
