@@ -1,0 +1,750 @@
+/* Remover qualquer padding e margin no body */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-weight: 300;  /* Deixa o texto mais fino (letra mais leve) */
+    font-family: 'Poppins', sans-serif; /* Mantém a fonte 'Poppins' */
+}
+
+body {
+    background-color: #e8e8e8;  /* Substitua pelo código da cor desejada */
+}
+
+
+
+.new-class a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 400; /* peso base */
+  display: inline-block; /* permite transform funcionar */
+  transition:
+    color 0.5s ease,
+    font-weight 0.5s ease,
+    transform 0.5s ease;
+}
+
+.new-class a:hover,
+.new-class a.active {
+  color: #29607f;
+  font-weight: 350;
+  transform: scale(1.02);
+}
+
+/* Aplicar rolagem suave ao clicar em links */
+html {
+    scroll-behavior: smooth; /* Faz a rolagem suave */
+}
+
+/* Cabeçalho */
+header {
+    position: relative;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* O cabeçalho deve ter largura total */
+    height: 100vh; /* Altura total da tela, para que ocupe toda a parte superior */
+}
+
+/* Header que cobre a tela toda no mobile */
+.header {
+    position: relative;
+    height: 100vh; /* Isso faz o header ter a altura total da tela */
+    width: 100%;
+  }
+  
+  .imagem-banner {
+    width: 100vw;  /* Garante que a largura ocupe exatamente a tela */
+    height: auto; /* Mantém a proporção correta */
+    object-fit: cover; /* Garante que a imagem preencha sem distorcer */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Fica atrás do conteúdo */
+    margin-top: 0px;
+    max-width: 100%; /* Evita overflow */
+  }
+
+  section, section p, section h2, section h3, section ul, section ol {
+    text-align: left;
+}
+
+/* Título do cabeçalho */
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+    z-index: 1; /* Garante que o título fique em cima da imagem */
+    position: relative;
+    color: white; /* Garantir que o título tenha cor visível */
+}
+
+/* Menu de navegação */
+.menu-desktop ul {
+    width: 100%; /* Largura total para o menu */
+    margin: 0; /* Remover a margem */
+    padding: 0; /* Remover o padding */
+    display: flex;
+    justify-content: center;
+    background-color: #e8e8e8; /* Cor de fundo do menu */
+    position: fixed; /* Fixa o menu na parte superior da tela */
+    top: 0; /* Define a posição do menu no topo */
+    left: 0; /* Alinha o menu à esquerda */
+    z-index: 1000; /* Garante que o menu ficará sobre outros elementos */
+    padding: 14px 0; /* Adiciona um pouco de espaçamento vertical */
+    box-sizing: border-box; /* Para garantir que o padding não aumente o tamanho total do menu */
+}
+
+/* Estilo para os links do menu */
+.menu-desktop ul li {
+    margin: 0;
+}
+
+.menu-desktop ul li a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 15px; /* Reduz o tamanho da fonte */
+    color: #7d7d7d; /* Cor do texto */
+    text-decoration: none;
+    text-align: center;
+}
+
+.menu-desktop a {
+    text-decoration: none; /* Remove qualquer sublinhado */
+    color: #000; /* Cor padrão */
+    border-bottom: none;
+}
+
+.menu-desktop a.active {
+    color: #29607f; /* Cor do link ativo */
+    font-weight: bold;
+    border-bottom: none; /* Remove a linha abaixo */
+    transform: scale(1.1); /* Fica maior no clique */
+    transition: transform 0.2s ease;
+}
+
+/* Estilos para as seções */
+section {
+    padding: 10px 20px;  /* Espaçamento interno das seções */
+    margin: 30px 0;  /* Espaçamento entre as seções */
+    border-radius: 8px;  /* Borda arredondada para as seções */
+}
+
+section h2 {
+    text-align: left;  /* Alinha o texto à esquerda */
+    padding-left: 6px;  /* Ajusta a distância do texto da borda esquerda */
+}
+
+section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: -5px; /* Espaçamento abaixo do título da seção */
+    color: #ffffff;
+    background-color: #29607f;
+    border-radius: 5px;
+}
+
+h3, p {
+    margin-bottom: 0;  /* Remove a margem inferior do h3 */
+    margin-top: 0;     /* Remove a margem superior do p */
+}
+
+h3 {
+    background-color: #7d7d7d;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding-left: 6px;  /* Ajusta a distância do texto da borda esquerda */
+}
+
+.indented {
+    list-style-type: disc;  /* Adiciona bolinhas (disc) antes de cada item */
+    margin-left: 20px;  /* Adiciona indentação para os itens */
+    padding-left: 0px;  /* Adiciona um pequeno espaço antes da bolinha */
+    list-style-type: disc;  /* Adiciona bolinhas antes de cada item */
+    margin-left: 20px;  /* Adiciona indentação para os itens */
+    padding-left: 0px;  /* Remove o preenchimento antes da bolinha */
+    margin-top: 0;  /* Remove o espaço no topo da lista */
+    padding-top: 0;  /* Remove o preenchimento no topo da lista */
+    font-weight: 300; /* Deixa a fonte mais fina */
+}
+
+.menu-desktop ul li a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 15px; /* Reduz o tamanho da fonte */
+    color: #7d7d7d; /* Cor do texto */
+    text-decoration: none;
+    text-align: center;
+}
+
+.menu-desktop a {
+    text-decoration: none; /* Remove qualquer sublinhado */
+    color: #000; /* Cor padrão */
+    border-bottom: none;
+}
+
+.menu-desktop a.active {
+    color: #29607f; /* Cor do link ativo */
+    font-weight: bold;
+    border-bottom: none; /* Remove a linha abaixo */
+}
+
+h3:not(:first-child) {
+    margin-top: 40px; /* Adiciona margem superior apenas nos h3 que não são os primeiros */
+}
+
+.matriz-container {
+    width: 1000px; /* Aumentando o tamanho da matriz */
+    height: 400px; /* Aumentando o tamanho da matriz */
+    margin: 0px auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid #1a1a1a;
+    position: relative;
+}
+
+.quadrant {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 20px; /* Aumentando o padding no topo */
+    padding-bottom: 20px; /* Aumentando o padding no fundo */
+    border: 1px solid #1a1a1a;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    padding-left: 10px; /* Adicionando mais espaçamento à esquerda */
+    padding-right: 10px; /* Adicionando mais espaçamento à direita */
+    overflow: auto; /* Garante que o conteúdo não ultrapasse os limites */
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 350;
+}
+
+.interviewee {
+    font-weight: 350;
+}
+
+.paragrafo-destaque {
+        font-weight: 350;
+}
+
+
+/* Esforço label */
+.effort-label {
+    position: absolute;
+    left: -90px; /* Ajustando o lado esquerdo */
+    top: 50%;
+    font-weight: bold;
+    font-size: 16px;
+    transform: translateY(-50%); /* Centraliza verticalmente */
+}
+
+.effort-high {
+    position: absolute;
+    left: -80px; /* Ajuste inicial */
+    top: 0%; /* Fica no topo */
+    font-weight: bold;
+    font-size: 14px;
+    transform: translateY(-50%);
+    color: #29607f;
+}
+
+.effort-high1 {
+    position: absolute;
+    right: -80px; /* Simétrico ao .effort-high */
+    top: 100%; /* Certifique-se de que o topo é igual */
+    font-weight: bold;
+    font-size: 14px;
+    transform: translateY(-50%);
+    color: #29607f;
+}
+
+.effort-low {
+    position: absolute;
+    left: -80px; /* Igual ao .effort-high */
+    top: 100%; /* Posiciona na parte inferior */
+    font-weight: bold;
+    font-size: 14px;
+    transform: translateY(-50%);
+    color: #29607f;
+}
+
+/* Impacto label */
+.impact-label {
+    position: absolute;
+    left: 50%; /* Centralizado horizontalmente */
+    bottom: -40px; /* Ajuste para ficar abaixo do quadrante Prioridades */
+    font-weight: bold;
+    font-size: 16px;
+    transform: translateX(-50%); /* Centraliza o texto */
+    text-align: center;
+}
+
+/* Estilo básico para todas as tabelas */
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse; /* Remove o espaçamento entre as bordas das células */
+    overflow: hidden; /* Garante que as bordas arredondadas não sejam cortadas */
+}
+
+/* Estilo das células */
+th, td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle;
+    border: 1px solid #1a1a1a; /* Adiciona uma borda de 1px nas células */
+}
+
+/* Cor de fundo para o cabeçalho */
+th {
+    background-color: #1a1a1a;
+    color: #e8e8e8;
+}
+
+.benchmark-image {
+    width: 75%;       /* A largura será 100% do elemento pai */
+    height: auto;      /* Mantém a proporção da imagem */
+    margin: 0; /* Remove a margem da imagem */
+    margin-bottom: 16px; /* Adiciona um espaçamento abaixo da imagem */
+  }
+
+  .matrizcsd-image {
+    width: 60%;       /* A largura será 100% do elemento pai */
+    height: auto;      /* Mantém a proporção da imagem */
+    margin: 0; /* Remove a margem da imagem */
+    margin-bottom: 18px; /* Adiciona um espaçamento abaixo da imagem */
+  }
+
+  .matriz-impacto-image {
+    width: 60%;       /* A largura será 100% do elemento pai */
+    height: auto;      /* Mantém a proporção da imagem */
+    margin: 0; /* Remove a margem da imagem */
+    margin-bottom: 18px; /* Adiciona um espaçamento abaixo da imagem */
+  }
+
+  .arquitetura-image {
+    width:  75%;       /* A largura será 100% do elemento pai */
+    height: auto;      /* Mantém a proporção da imagem */
+    margin: 0; /* Remove a margem da imagem */
+    margin-bottom: 18px; /* Adiciona um espaçamento abaixo da imagem */
+  }   
+
+  .persona-quadrado img {
+    width: 60%;
+    height: 290px;
+    object-fit: cover;
+    border-radius: 5px;
+    object-position: center 6%;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: space-between;  /* Espaço entre as imagens */
+    align-items: center;
+    flex-wrap: wrap;  /* Faz as imagens quebrarem linha se o espaço for pequeno */
+  }
+  
+  .carousel-item {
+    width: calc(100% / 4 - 10px);  /* Calcula 1/6 da largura do container, com espaçamento */
+    margin: 5px;  /* Margem para dar espaçamento entre as imagens */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel-image {
+    width: 100%;  /* As imagens ocuparão 100% da largura do item */
+    height: auto;  /* Altura automática para manter a proporção */
+    border-radius: 5px;
+    object-fit: cover;  /* Garante que a imagem cubra a área do contêiner */
+  }
+
+  .figma-prototipo {
+  border: none;
+  width: 100%;     /* ou 800px, se quiser fixo */
+  height: 450px;   /* aqui você controla a altura */
+  border-radius: 5px;
+}
+
+.footer-portfolio {
+  background-color: #1d465e;
+  color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  margin-top: 60px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.footer-text {
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  gap: 20px; /* espaçamento entre os links */
+  flex-wrap: wrap; /* quebra linha se necessário */
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #3682AC;
+}
+
+
+
+/* Estilo para telas maiores (desktop) */
+@media (min-width: 1024px) {
+    p, h3 {
+        width: 60%;  /* O conteúdo ocupa 60% da largura na tela maior */
+    }
+
+.new-class a {
+        text-decoration: none;
+        color: inherit;
+        transition: transform 0.3s ease; /* A transição será aplicada à transformação */
+    }
+
+.new-class a:hover {
+    color: #29607f; /* A cor que você deseja para o hover, aqui usei vermelho (você pode mudar) */
+    }
+
+    /* Efeito de hover - muda a cor do texto quando o mouse passa sobre o link */
+.indented a:hover {
+    color: #29607f; /* A cor que você deseja para o hover, aqui usei vermelho (você pode mudar) */
+    }
+
+.custom-title {
+    color: #29607f; /* Cor desejada */
+    font-weight: bold; /* Garantir o negrito */
+    }
+}
+
+.paragrafo-destaque {
+    color: #29607f; /* Ou qualquer cor que quiser */
+  }
+
+
+  .full-width-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+.full-widthb-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-top-left-radius: 5px;     /* Arredonda o canto superior esquerdo */
+  border-top-right-radius: 5px;    /* Arredonda o canto superior direito */
+  border-bottom-left-radius: 5px;  /* Arredonda o canto inferior esquerdo */
+  border-bottom-right-radius: 5px; /* Arredonda o canto inferior direito */
+}
+
+
+  .full-widthbo-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom-left-radius: 5px; /* Arredonda o canto esquerdo */
+    border-bottom-right-radius: 5px; /* Arredonda o canto direito */
+  }
+
+  .img-pequena {
+    width: 500px; /* Ou qualquer tamanho que você quiser */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Pra evitar espaçamento estranho */
+  } 
+
+    .img-icon {
+    width: 300px; /* Ou qualquer tamanho que você quiser */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Pra evitar espaçamento estranho */
+  } 
+
+  .img-compo {
+    width: 1000px; /* Ou qualquer tamanho que você quiser */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Pra evitar espaçamento estranho */
+  } 
+
+  #aprendizados p:last-child {
+    margin-bottom: 100px; /* Ajuste o valor conforme necessário */
+}
+
+/* ----------- MOBILE ----------- */
+@media (max-width: 768px) {
+
+    .imagem-banner {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        display: block;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        z-index: -1; /* Coloca a imagem por baixo do menu */
+    }
+    
+.persona-quadrado img {
+  width: 100%;
+  height: auto; /* Faz a altura se ajustar proporcionalmente à largura */
+  max-height: 200px; /* Limita a altura máxima se quiser controlar o tamanho */
+  object-fit: contain; /* Mostra a imagem inteira sem cortar */
+  border-radius: 5px;
+}
+    .img-compo {
+        width: 320px; /* Ou qualquer tamanho que você quiser */
+        height: auto; /* Mantém a proporção da imagem */
+        display: block; /* Pra evitar espaçamento estranho */
+      } 
+
+    .img-pequena {
+        width: 250px; /* Ou qualquer tamanho que você quiser */
+        height: auto; /* Mantém a proporção da imagem */
+        display: block; /* Pra evitar espaçamento estranho */
+      }
+
+    .arquitetura-image {
+        margin-bottom: 12px; /* Pode ajustar pro mobile se quiser menor */
+      }
+    
+      #userflow {
+        margin-top: 20px;
+      }
+
+    .carousel-item {
+        flex: 1 1 calc(33.33% - 10px); /* 33.33% para 3 colunas */
+        margin-top: 10px;
+      }
+
+    .arquitetura-image {
+        width: 100%;       /* A largura será 100% do elemento pai */
+        height: auto;      /* Mantém a proporção da imagem */
+        margin: 0; /* Remove a margem da imagem */
+        margin-bottom: 18px; /* Adiciona um espaçamento abaixo da imagem */
+      }   
+
+    .matriz-impacto-image {
+        width: 100%;       /* A largura será 100% do elemento pai */
+        height: auto;      /* Mantém a proporção da imagem */
+        margin: 0; /* Remove a margem da imagem */
+        margin-bottom: 18px; /* Adiciona um espaçamento abaixo da imagem */
+      }    
+
+    .benchmark-image {
+        width: 100%;       /* A largura será 100% do elemento pai */
+        height: auto;      /* Mantém a proporção da imagem */
+        margin: 0; /* Remove a margem da imagem */
+        margin-bottom: 18px; /* Adiciona um espaçamento abaixo da imagem */
+      }
+
+      .matrizcsd-image {
+        width: 100%;       /* A largura será 100% do elemento pai */
+        height: auto;      /* Mantém a proporção da imagem */
+        margin: 0; /* Remove a margem da imagem */
+        margin-bottom: 18px; /* Adiciona um espaçamento abaixo da imagem */
+      }
+
+    /* Estilo para o clique no mobile (ativo) */
+    .menu-desktop ul li a:active {
+        color: #29607f;
+        transform: scale(1.1);
+        transition: transform 0.2s ease;
+    }
+
+    /* Esconde o menu no mobile por padrão */
+    .container {
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    /* Outras regras específicas para o layout do mobile */
+    .menu-desktop {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 60%;
+        height: 100vh; /* Garante que o menu ocupe 100% da altura da tela */
+        background-color: #e8e8e8;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 60px; /* Ajuste o valor do padding se precisar de mais espaço */
+        transform: translateX(-100%); /* Mantém o menu escondido inicialmente */
+        transition: transform 0.3s ease-in-out;
+    }
+    
+
+    .menu-desktop ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 34px;
+    }
+
+    .menu-desktop li {
+        padding: 8px 0;
+        padding-top: 68px;
+        transform: translateX(-2px);
+    }
+
+    .menu-toggle {
+        position: fixed;
+        left: 15px;
+        top: 10px;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+        z-index: 1000;
+    }
+
+    /* Quando o menu está aberto */
+    .menu-open {
+        transform: translateX(0) !important;
+        z-index: 999;
+    }
+
+    /* Estilo da tabela para mobile */
+    @media (max-width: 768px) {
+        /* Menu de navegação */
+.menu-desktop ul {
+    width: 100%; /* Largura total para o menu */
+    margin: 0; /* Remover a margem */
+    padding: 0; /* Remover o padding */
+    display: flex;
+    justify-content: center;
+    background-color: #e8e8e8; /* Cor de fundo do menu */
+    position: fixed; /* Fixa o menu na parte superior da tela */
+    top: 0; /* Define a posição do menu no topo */
+    left: 0; /* Alinha o menu à esquerda */
+    z-index: 1000; /* Garante que o menu ficará sobre outros elementos */
+    padding: 0px 0; /* Aumentar o padding superior e inferior *
+    box-sizing: border-box; /* Para garantir que o padding não aumente o tamanho total do menu */
+}
+
+/* Estilo para os links do menu */
+.menu-desktop ul li {
+    margin: 0;
+}
+
+.menu-desktop ul li a {
+    display: block;
+    padding: 2px 20px;
+    font-size: 15px; /* Reduz o tamanho da fonte */
+    color: #7d7d7d; /* Cor do texto */
+    text-decoration: none;
+    text-align: center;
+}
+
+.menu-desktop ul {
+    gap: -40px; /* Adiciona um pequeno espaçamento entre os links */
+}
+
+.menu-desktop a {
+    text-decoration: none; /* Remove qualquer sublinhado */
+    color: #000; /* Cor padrão */
+    border-bottom: none;
+}
+        }
+}
+
+/* Menu de navegação DESKTOP */
+@media (min-width: 769px) {
+
+    .imagem-banner {
+        width: 100vw; /* 100% da largura da tela */
+        height: 100vh; /* 100% da altura da tela */
+        object-fit: cover; /* Faz a imagem preencher sem distorcer */
+        display: block;
+        margin: 0;
+        padding: 0;
+
+      }
+
+    .menu-desktop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #e8e8e8;
+        z-index: 1000;
+        padding: 14px 0;
+        box-sizing: border-box;
+    }
+
+    .menu-desktop ul {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .menu-desktop ul li {
+        margin: 0;
+    }
+
+    .menu-desktop ul li a {
+        display: block;
+        padding: 20px 44px;
+        font-size: 15px;
+        color: #7d7d7d;
+        text-decoration: none;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .menu-desktop a.active {
+        color: #29607f;
+        font-weight: bold;
+        transform: scale(1.1);
+    }
+
+    .menu-desktop ul li a:hover {
+        color: #29607f;
+        transform: scale(1.1);
+    }
+}
+
+/* Menu para dispositivos com largura de 800px a 1280px */
+@media screen and (min-width: 800px) and (max-width: 1280px) {
+
+    .menu-desktop ul {
+        display: flex; /* Continua com flexbox para o layout horizontal */
+        justify-content: space-around; /* Alinha os itens do menu de forma espaçada */
+    }
+
+    .menu-desktop ul li a {
+        padding: 10px 20px; /* Ajuste no espaçamento lateral */
+        font-size: 14px; /* Reduz um pouco o tamanho da fonte */
+        color: #7d7d7d; /* Cor do texto */
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .menu-desktop {
+        padding: 10px 0; /* Ajuste do padding superior e inferior */
+        background-color: #e8e8e8; /* Cor de fundo */
+    }
+}

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Meta dados -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariana Oliveira</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="02.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <header>
+
+        <!-- Botão do menu hambúrguer no mobile -->
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+        <nav class="menu-desktop">
+            <ul>
+                <li><a href="#projetos" id="projetos-item">Projetos</a></li>
+                <li><a href="#sobre" id="sobre-item">Sobre</a></li>
+                <li><a href="#cv" id="cv-item">CV</a></li>
+            </ul>
+        </nav>
+        <section id="container">
+          <h1 class="name">Mariana Oliveira</h1>
+          <p class="title">Designer UX/UI</p>
+          <p class="quote">A criatividade transforma interações cotidianas em experiências extraordinárias.</p>
+        </section> <!-- Aqui fechamos a tag <section> corretamente -->
+    </header>
+
+  <div style="height: 500px;"></div> <!-- Espaçador -->
+
+  <div id="container-titulo" class="container-titulo">
+    <h1 class="titulo-projetos">Projetos</h1>
+  </div>
+  
+
+<!-- Conteúdo da página "Projetos" -->
+<section id="projetos">
+
+  <a href="projeto01.html" class="retangulo-link"> <!-- Adiciona o link aqui -->
+<div class="retangulo">
+  <img src="colaboncapa.png" alt="Imagem do projeto" class="imagem-projeto">
+</div>
+  </a>
+</section>
+
+<!--  FIM Conteúdo da página "Projetos" -->
+
+<div style="height: 400px;"></div> <!-- Espaçador -->
+
+<!-- Conteúdo da página "Sobre" -->
+<section id="sobre">
+  <div class="container-sobre">
+    <div class="texto-sobre">
+      <h1 class="titulo-sobre">Sobre mim</h1>
+      <p>Oi, eu sou a Mariana Oliveira, designer gráfica com uma grande paixão por arte e criatividade. Desde pequena, os desenhos sempre fizeram parte da minha vida, e com o tempo, essa paixão se transformou em pintura de quadros, o que me ajudou a desenvolver um olhar mais atento aos detalhes.</p><br>
+
+      <p>Aos 21 anos, mergulhei no design gráfico, unindo criatividade com propósito em projetos visuais. Hoje, aos 26, morando no interior de São Paulo, estou focada na área de UX/UI, onde encontrei a combinação ideal entre estética, funcionalidade e experiência do usuário.</p>
+      
+      <p>Estou em busca da minha primeira oportunidade profissional como designer UX/UI, com muita vontade de aprender, crescer e transformar boas ideias em experiências significativas.</p>
+    </div>
+
+<div class="imagem-sobre">
+  <img src="1.jpeg" alt="Mariana Oliveira" />
+</div>
+
+
+
+  </div> <!-- fecha container-sobre -->
+</section>
+
+<!--  FIM Conteúdo da página "Sobre" -->
+
+<div style="height: 400px;"></div> <!-- Espaçador -->
+
+<!--  Conteúdo da página "CV" -->
+<section id="cv">
+  <div class="container">
+      <!-- Título e descrição da seção CV -->
+      <h1 class="titulo-sobre">Resumo Profissional</h1>
+      <p>Confira meu currículo para conhecer mais sobre minha trajetória.</p>
+      
+      <!-- Botões para o CV -->
+      <div class="botoes-cv">
+            <a href="/docs/Currículo - Mariana Caroline de Oliveira - Designer UX UI.pdf" download class="btn-cv">Download CV</a>
+            <a href="/docs/Currículo - Mariana Caroline de Oliveira - Designer UX UI.pdf" target="_blank" class="btn-cv">Ver Online</a>
+      </div>
+  </div>
+</section>
+<!--  FIM Conteúdo da página "CV" -->
+
+<div style="height: 400px;"></div> <!-- Espaçador -->
+
+<footer class="rodape">
+  <div class="container-rodape">
+    <p>© 2025 Mariana Oliveira. Todos os direitos reservados.</p>
+    <ul class="social-links">
+      <li><a href="https://www.linkedin.com/in/marianacadeoli" target="_blank">LinkedIn</a></li>
+      <li><a href="mailto:mari_oliveira99@icloud.com">E-mail</a></li>
+      <li><a href="https://wa.me/5516997311265" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+
+
+  const links = document.querySelectorAll('.menu-desktop ul li a');
+
+  links.forEach(link => {
+    link.addEventListener('click', function () {
+      // Remove a classe 'ativo' de todos os links
+      links.forEach(l => l.classList.remove('ativo'));
+      
+      // Adiciona 'ativo' somente ao link clicado
+      this.classList.add('ativo');
+    });
+  });
+
+
+function trocarImagemProjeto() {
+  const imagemProjeto = document.querySelector(".imagem-projeto");
+
+  if (!imagemProjeto) return; // segurança: evita erro se não encontrar a imagem
+
+  if (window.innerWidth <= 768) {
+    imagemProjeto.src = "colaboncapamobile.png"; // Imagem para mobile
+  } else {
+    imagemProjeto.src = "colaboncapa.png"; // Imagem para desktop
+  }
+}
+
+// Executa ao carregar a página
+trocarImagemProjeto();
+
+// Reexecuta ao redimensionar a tela
+window.addEventListener("resize", trocarImagemProjeto);
+
+  function toggleMenu() {
+      document.querySelector(".menu-desktop").classList.toggle("menu-open");
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+      const menuLinks = document.querySelectorAll(".menu-desktop a");
+      const sections = document.querySelectorAll("section");
+      const firstSection = document.querySelector(".container"); // Seção inicial
+
+      function scrollToSection(event) {
+          event.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          const targetSection = document.querySelector(targetId);
+
+          if (targetSection) {
+              const windowHeight = window.innerHeight;
+              const sectionHeight = targetSection.offsetHeight;
+              const sectionTop = targetSection.offsetTop;
+              const offset = sectionTop - (windowHeight / 2) + (sectionHeight / 2);
+
+              window.scrollTo({
+                  top: offset,
+                  behavior: "smooth"
+              });
+
+              menuLinks.forEach(link => link.classList.remove("active"));
+
+              setTimeout(() => {
+                  this.classList.add("active");
+              }, 800);
+          }
+      }
+
+      menuLinks.forEach(link => {
+          link.addEventListener("click", scrollToSection);
+      });
+
+      function activateLink() {
+          let fromTop = window.scrollY;
+          let windowHeight = window.innerHeight;
+          let firstSectionHeight = firstSection.offsetHeight;
+          let firstSectionBottom = firstSection.offsetTop + firstSectionHeight;
+
+          // Se estiver na primeira seção, remove os links ativos
+          if (fromTop < firstSectionBottom / 3) {
+              menuLinks.forEach(link => link.classList.remove("active"));
+              return;
+          }
+
+          let found = false;
+
+          sections.forEach(section => {
+              let sectionTop = section.offsetTop;
+              let sectionHeight = section.offsetHeight;
+              let sectionCenter = sectionTop - (windowHeight / 2) + (sectionHeight / 2);
+
+              if (fromTop >= sectionCenter - 50 && fromTop < sectionCenter + sectionHeight - 50) {
+                  let sectionId = "#" + section.id;
+
+                  menuLinks.forEach(link => {
+                      if (link.getAttribute("href") === sectionId) {
+                          link.classList.add("active");
+                          found = true;
+                      } else if (!found) {
+                          link.classList.remove("active");
+                      }
+                  });
+              }
+          });
+      }
+
+      window.addEventListener("scroll", activateLink);
+      activateLink();
+  });
+</script>
+
+
+</body>
+</html>
