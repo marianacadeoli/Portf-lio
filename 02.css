@@ -1,14 +1,8 @@
 /* Remover qualquer padding e margin no body */
-* {
-  box-sizing: border-box;
-}
-
-html, body {
+body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
   font-family: 'Poppins', sans-serif;
 }
 
